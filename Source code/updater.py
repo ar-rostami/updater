@@ -34,6 +34,7 @@ def yesupdate():
      result = messagebox.askquestion("", "نرم افزار کنسول نیاز به بروز رسانی دارد . به روز رسانی می کنید؟")
      if result == "yes":
         zipurl = ("http://"+(server_url)+"/update.zip")
+        os.system("taskkill /f /im  CONSOL.exe")
         with urlopen(zipurl) as zipresp:
             with ZipFile(BytesIO(zipresp.read())) as zfile:
                 zfile.extractall('.')
