@@ -27,15 +27,13 @@ version_control = version_control.decode()
 ##############Funtions############
 ####funtion Download Update And Extract ZIP####
 def yesupdate():
-     result = messagebox.askquestion("", "افزار کنسول نیاز به بروز رسانی دارد . به روز رسانی میکنید؟")
+     result = messagebox.askquestion("", "افزار کنسول نیاز به بروز رسانی دارد . به روز رسانی می کنید؟")
      if result == "yes":
         zipurl = ("http://"+(server_url)+"/update.zip")
         with urlopen(zipurl) as zipresp:
             with ZipFile(BytesIO(zipresp.read())) as zfile:
                 zfile.extractall('.')
-     else :
-        hooks = ExitHooks()
-        hooks.hook()
+        messagebox.showinfo("", "!نرم افزار کنسول شما بروز رسانی شد")
 
 ####funtion EXIT####
 class ExitHooks(object):
@@ -58,7 +56,7 @@ class ExitHooks(object):
 
 ####Call Funtions####
 if version_control == data_file:
-    messagebox.showwarning("", "!نرم افزار کنسول شما بروز میباشد")
+    messagebox.showwarning("", "!نرم افزار کنسول شما بروز می باشد")
     hooks = ExitHooks()
     hooks.hook()
 elif version_control != data_file:
