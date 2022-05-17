@@ -8,7 +8,8 @@ from zipfile import ZipFile
 import tkinter as tk
 from tkinter import messagebox
 import atexit
-
+root = tk.Tk()
+root.withdraw()
 
 ####Open Server URL####
 file_server_url = open("server.txt")
@@ -27,7 +28,7 @@ version_control = version_control.decode()
 ##############Funtions############
 ####funtion Download Update And Extract ZIP####
 def yesupdate():
-     result = messagebox.askquestion("", "افزار کنسول نیاز به بروز رسانی دارد . به روز رسانی می کنید؟")
+     result = messagebox.askquestion("", "نرم افزار کنسول نیاز به بروز رسانی دارد . به روز رسانی می کنید؟")
      if result == "yes":
         zipurl = ("http://"+(server_url)+"/update.zip")
         with urlopen(zipurl) as zipresp:
