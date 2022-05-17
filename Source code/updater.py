@@ -8,8 +8,11 @@ from zipfile import ZipFile
 import tkinter as tk
 from tkinter import messagebox
 import atexit
+
+####Hide Root Tk####
 root = tk.Tk()
 root.withdraw()
+
 
 ####Open Server URL####
 file_server_url = open("server.txt")
