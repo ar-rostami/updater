@@ -1,1 +1,1 @@
-# simple-updater
+updater
