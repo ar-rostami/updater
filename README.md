@@ -3,7 +3,7 @@
 <br/>
 ## Get Start ##<br/>
 
-1. python3 -m pip install -r requarment.txt<br/>
+1. python3 -m pip install -r requirements.txt<br/>
 
 2. change IP on server.txt<br/>
 
